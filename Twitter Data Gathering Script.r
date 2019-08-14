@@ -1,13 +1,4 @@
-library(NLP)
 library(twitteR)
-library(syuzhet)
-library(syuzhet)
-library(tm)
-library(SnowballC)
-library(stringi)
-library(topicmodels)
-library(ROAuth)
-library(ggplot2)
 
 consumer_key <- 'XXXXXXX'
 consumer_secret <- 'XXXXXXX'
