@@ -5,7 +5,7 @@ from nltk import sent_tokenize, word_tokenize, pos_tag
 from nltk.corpus import stopwords
 import pandas as pd
 import re
-combined_news_data=pd.read_csv("E:/UCC Lecture Notes and e-books/Term 3/Project-Stock Market/Final Data/News/Combined file/All News.csv")
+combined_news_data=pd.read_csv("All News.csv")
 for index, row in combined_news_data.iterrows():
     text=row[3]
     
@@ -83,4 +83,4 @@ combine_news['Overall']=combine_news.sum(axis=1)
 combine_news['Pos']=combine_news['Positive']/combine_news['Overall']
 combine_news['Neu']=combine_news['Neutral']/combine_news['Overall']
 combine_news['Neg']=combine_news['Negative']/combine_news['Overall']
-combine_news[['Pos','Neu','Neg']].to_csv('E:/UCC Lecture Notes and e-books/Term 3/Project-Stock Market/testing/News_SentimentWord.csv')
+combine_news[['Pos','Neu','Neg']].to_csv('News_SentimentWord.csv')
