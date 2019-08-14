@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-tweets=pd.read_csv("E:/UCC Lecture Notes and e-books/Term 3/Project-Stock Market/Final Data/Twitter/Combined/All Tweets.csv",
+tweets=pd.read_csv("All Tweets.csv",
                          header=0,encoding = 'unicode_escape')
 tweets=tweets[['text','created_at']]
 for index, row in tweets.iterrows():
@@ -53,4 +53,4 @@ tweets_sentiment['Overall']=tweets_sentiment.sum(axis=1)
 tweets_sentiment['Pos']=tweets_sentiment['Positive']/tweets_sentiment['Overall']
 tweets_sentiment['Neu']=tweets_sentiment['Neutral']/tweets_sentiment['Overall']
 tweets_sentiment['Neg']=tweets_sentiment['Negative']/tweets_sentiment['Overall']
-tweets_sentiment[['Pos','Neu','Neg']].to_csv('E:/UCC Lecture Notes and e-books/Term 3/Project-Stock Market/Final Data/Twitter/Combined/processed_tweets.csv')
+tweets_sentiment[['Pos','Neu','Neg']].to_csv('processed_tweets.csv')
