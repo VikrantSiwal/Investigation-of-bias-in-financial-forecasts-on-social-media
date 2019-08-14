@@ -2,9 +2,9 @@ from newsapi import NewsApiClient
 import json
 import re
 import pandas as pd
-news = NewsApiClient(api_key='5774b83e765c4a849f5f144127c10916')
+news = NewsApiClient(api_key='XXXXXXXXX')
 stocks=["Apple","Amazon","Google","Facebook","Microsoft"]
-date=['2019-07-08','2019-07-15'] #start 16 July
+date=['YYYY-MM-DD','YYYY-MM-DD'] 
 source=['reuters', 'cnbc','business-insider', 'fortune', 'the-new-york-times','the-wall-street-journal']
 domain=['reuters.com', 'cnbc.com','businessinsider.com', 'fortune.com', 'nytimes.com','wsj.com']
 for k in range(len(source)):
@@ -24,7 +24,7 @@ for k in range(len(source)):
                                              'Source':j['source']['name'],'Description':j['description'],
                                              'Url':j['url'],'Content':j['content']},ignore_index=True)
                         filename=source[k]+"_"+stocks[i]+"_"+date[0]+"_"+date[1]+'.csv'
-                        file="E:/UCC Lecture Notes and e-books/Term 3/Project-Stock Market/testing/New folder/"+ filename
+                        file="New folder/"+ filename
                         newsdata.to_csv(file, encoding='utf-8', index=False)
     except:
         pass
