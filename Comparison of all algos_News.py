@@ -1,7 +1,7 @@
 import pandas as pd
 import re
-news=pd.read_csv("E:/UCC Lecture Notes and e-books/Term 3/Project-Stock Market/Final Data/Work/Machine Learing/News.csv",
-                         header=0,encoding = 'unicode_escape')
+news=pd.read_csv("News.csv",
+                        header=0,encoding = 'unicode_escape')
 for index, row in news.iterrows():
     text=row[3]
     
