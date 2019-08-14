@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-twitter=pd.read_csv("E:/UCC Lecture Notes and e-books/Term 3/Project-Stock Market/Final Data/Work/Machine Learing/Tweets.csv",
+twitter=pd.read_csv("Tweets.csv",
                          header=0,encoding = 'unicode_escape')
 for index, row in twitter.iterrows():
     text=row[0]
