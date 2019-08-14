@@ -1,5 +1,5 @@
 import pandas as pd
-df=pd.read_csv("E:/UCC Lecture Notes and e-books/Term 3/Project-Stock Market/Final Data/Compare Files/Compare.csv")
+df=pd.read_csv("Compare.csv")
 from scipy.stats.stats import pearsonr
 def cor(df):
     l=df.Stock.unique()
